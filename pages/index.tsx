@@ -20,7 +20,7 @@ export default function Home() {
      scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
       >
         <Head>
-          <title>Amit's Portfolio</title>
+          <title>Amits Portfolio</title>
         </Head>
 
         <Header />
