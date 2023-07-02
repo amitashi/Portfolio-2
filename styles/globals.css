@@ -12,4 +12,27 @@
     text-gray-500 placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40 focus:text-[#f7ab0a]/40
     hover:border-[#f7ab0a]/40 w-full;
   }
+
+  .headericons {
+    @apply text-[#a9afc3] h-7 w-7 inline-block;
+  }
+
+  .darktext {
+    @apply text-[#a9afc3];
+  }
+  .lighttext {
+    @apply text-[#7e7e7e];
+  }
+  .darkbg {
+    @apply bg-[#111319];
+  }
+  .lightbg {
+    @apply bg-[#f5f8fc];
+  }
+  .hoverSocialIconDark {
+    @apply hover:scale-125 cursor-pointer hover:bg-[#212327] hover:rounded-lg;
+  }
+  .hoverSocialIconLight {
+    @apply hover:scale-125 cursor-pointer hover:bg-[#e5e7ed] hover:rounded-lg;
+  }
 }

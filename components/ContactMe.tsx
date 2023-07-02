@@ -1,6 +1,7 @@
 import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import Link from "next/link";
 
 type FormValues = {
   name: string;
@@ -13,7 +14,7 @@ type Props = {};
 const ContactMe = (props: Props) => {
   const { register, handleSubmit } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    window.location.href = `mailto:amit.kumar280198@gmail?subject=${data.subject}&body=Hi, My Name <is1 className="${data.message}">data.name</is1>`;
+    window.location.href = `mailto:priyanshul@gmail?subject=${data.subject}&body=Hi, My Name <is1 className="${data.message}">data.name</is1>`;
   };
   return (
     <div
@@ -31,12 +32,16 @@ const ContactMe = (props: Props) => {
         <div className="space-y-4">
           <div className="flex items-center space-x-5">
             <PhoneIcon className="text-[#f7ab0a] h-7 w-0-7 animate-pulse" />
-            <p>+01 7392343808</p>
+            <p>+91 9573861578</p>
           </div>
 
           <div className="flex item-center space-x-5">
             <EnvelopeIcon className="text-[#f7ab0a] h-7 w-0-7 animate-pulse" />
-            <p>amit.kumar@gamil.com</p>
+            <p>
+              <Link href="mailto:priyanshul@gmail.com">
+                contact.priyanshul@gmail.com
+              </Link>
+            </p>
           </div>
 
           <div className="flex item-center space-x-5">

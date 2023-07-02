@@ -64,7 +64,7 @@ const Projects = (props: Props) => {
         ))}
       </div>
 
-      <div className="w-full absolute top-[30%] bg-[#f7ab0a]/10 lefft-0 h-[400px] -skew-y-12" />
+      <div className="w-full absolute top-[30%] bg-[#f7ab0a]/10 left-0 h-[400px] -skew-y-12" />
     </div>
   );
 };

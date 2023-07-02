@@ -11,19 +11,25 @@ import ContactMe from "@/components/ContactMe";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Loader from "@/components/Loader";
+import { useState } from "react";
+import avatar from "../public/imgdata/avatar.jpg";
+import Education from "../components/Education";
 
 export default function Home() {
+  const [darkTheme, setDarkTheme] = useState(true);
+  const darkThemeClass =
+    "bg-[#111319] text-[#a9afc3] h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#a9afc3]/80";
+  const lighThemeclass =
+    "bg-[#f5f8fc] text-[#7e7e7e] h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#a9afc3]/80";
+
   return (
     <>
-      <div
-        className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0
-     scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
-      >
+      <div className={darkTheme ? darkThemeClass : lighThemeclass}>
         <Head>
-          <title>Amits Portfolio</title>
+          <title>Priyanshu's Portfolio</title>
         </Head>
 
-        <Header />
+        <Header setDarkTheme={setDarkTheme} darkTheme={darkTheme} />
         {/* <Loader /> */}
         {/* Hero */}
         <section id="hero" className="snap-start">
@@ -37,6 +43,12 @@ export default function Home() {
         <section id="experience" className="snap-center">
           <Experience />
         </section>
+
+        {/* education */}
+        {/* <section id="education" className="snap-center">
+          <Education />
+        </section> */}
+
         <section id="skills" className="snap-start">
           <Skills />
         </section>
@@ -48,18 +60,16 @@ export default function Home() {
           <ContactMe />
         </section>
         {/* <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
-            <Image
-              className="h-10 w-10 rounded-full filter grayscal hover:grayscale-0"
-              src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/09/scroll-to-top.png?fit=1200%2C600&ssl=1"
-              alt="logo"
-              height={10}
-              width={10}
-            />
-          </div>
-        </footer>
-      </Link> */}
+          <footer className="sticky bottom-5 w-full cursor-pointer">
+            <div className="flex items-center justify-center">
+              <Image
+                className="h-10 w-10 rounded-full filter grayscal hover:grayscale-0"
+                src={avatar}
+                alt="logo"
+              />
+            </div>
+          </footer>
+        </Link> */}
       </div>
     </>
   );

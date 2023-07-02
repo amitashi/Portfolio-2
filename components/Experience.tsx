@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
-motion;
+import data from "../public/data/experience.js";
 type Props = {};
 
 const Experience = (props: Props) => {
+  console.log(data);
+
   return (
     <motion.div
       initial={{
@@ -24,10 +26,17 @@ const Experience = (props: Props) => {
       {/* <div className="h-10 w-10 border fill-white cursor-pointer" />
       <div className="h-20 w-10 border fill-white cursor-pointer" /> */}
       <div className="w-full  flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        {data.map((item, index) => (
+          <ExperienceCard
+            key={index}
+            companyname={item.companyname}
+            companylogo={item.companylogo}
+            startDate={item.startDate}
+            endDate={item.endDate}
+            role={item.role}
+            experience={item.experience}
+          />
+        ))}
       </div>
     </motion.div>
   );
