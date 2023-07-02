@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <div className={darkTheme ? darkThemeClass : lighThemeclass}>
         <Head>
-          <title>Priyanshu's Portfolio</title>
+          <title>Priyanshu Katiyar</title>
         </Head>
 
         <Header setDarkTheme={setDarkTheme} darkTheme={darkTheme} />
